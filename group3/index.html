@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>GSE School System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>GSE School System</h1>
+
+<!-- LOGIN -->
+<div id="login" class="card">
+    <input id="id" placeholder="Enter ID (gse_001)">
+    <input id="pass" type="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+</div>
+
+<!-- ADMIN -->
+<div id="admin" class="card hidden">
+<h2>Admin Panel</h2>
+
+<input id="sid" placeholder="New Student ID">
+<input id="sname" placeholder="Student Name">
+<button onclick="addStudent()">Add Student</button>
+
+<input id="rid" placeholder="Student ID">
+<input id="sub" placeholder="Subject">
+<input id="score" placeholder="Score">
+<button onclick="addResult()">Add Result</button>
+
+<button onclick="logout()">Logout</button>
+</div>
+
+<!-- TEACHER -->
+<div id="teacher" class="card hidden">
+<h2>Teacher Panel</h2>
+
+<textarea id="hw" placeholder="Homework"></textarea>
+<button onclick="addHW()">Post</button>
+
+<div id="hwList"></div>
+
+<button onclick="logout()">Logout</button>
+</div>
+
+<!-- STUDENT -->
+<div id="student" class="card hidden">
+<h2 id="stName"></h2>
+
+<table>
+<thead>
+<tr><th>Subject</th><th>Score</th></tr>
+</thead>
+<tbody id="table"></tbody>
+</table>
+
+<p>Average: <span id="avg"></span></p>
+<p>Rank: <span id="rank"></span></p>
+
+<div id="studentHW"></div>
+
+<button onclick="logout()">Logout</button>
+</div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
